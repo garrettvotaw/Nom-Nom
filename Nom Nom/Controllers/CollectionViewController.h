@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CollectionViewController.h
 //  Nom Nom
 //
 //  Created by Garrett Votaw on 3/10/18.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RecipeCell.h"
+#import "Meal.h"
 
-@interface ViewController : UIViewController
-
+@interface CollectionViewController : UICollectionViewController
 
 @end
-
