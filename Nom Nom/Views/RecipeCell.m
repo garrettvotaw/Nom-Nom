@@ -12,7 +12,8 @@
 
 - (void)setUrlString:(NSString *)urlString {
     _urlString = urlString;
-    [self downloadImageWithURL:urlString];
+    //FIXME: Don't forget to uncomment
+//    [self downloadImageWithURL:urlString];
 }
 
 - (void)downloadImageWithURL:(NSString*)urlString {
@@ -25,7 +26,6 @@
 
         dispatch_async(dispatch_get_main_queue(), ^{
             self.image.image = image;
-            NSLog(@"Error: %@", error);
         });
 
     }];

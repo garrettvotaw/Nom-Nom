@@ -10,6 +10,10 @@
 #import "RecipeCell.h"
 #import "Meal.h"
 
-@interface CollectionViewController : UICollectionViewController
+@interface CollectionViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate>
 - (void)getJSON:(NSString*)query;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
+
 @end

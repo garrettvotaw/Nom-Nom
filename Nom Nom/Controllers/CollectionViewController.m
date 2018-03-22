@@ -21,6 +21,9 @@ static NSString * const reuseIdentifier = @"RecipeCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.searchBar.delegate = self;
     [self getJSON: @"Pizza"];
 }
 
@@ -42,14 +45,13 @@ static NSString * const reuseIdentifier = @"RecipeCell";
 
 
 - (void)getJSON:(NSString*)query {
-    //NSURL *url = [[NSURL alloc] initWithString:@"https://api.yummly.com/v1/api/recipes?_app_id=03d6fe64&_app_key=4d3a030938daf76d8eb2fbc37a76f97e&requirePictures=true&maxResult=50&start=0&q=pizza"];
     NSString *urlString = @"https://api.yummly.com";
     NSURLComponents *components = [[NSURLComponents alloc] initWithString:urlString];
     components.path = @"/v1/api/recipes";
     components.queryItems = @[[[NSURLQueryItem alloc] initWithName:@"_app_id" value:@"03d6fe64"], [[NSURLQueryItem alloc] initWithName:@"_app_key" value:@"4d3a030938daf76d8eb2fbc37a76f97e"],
         [[NSURLQueryItem alloc] initWithName:@"q" value:query],
         [[NSURLQueryItem alloc] initWithName:@"requirePictures" value:@"true"],
-        [[NSURLQueryItem alloc] initWithName:@"maxResult" value:@"50"]];
+        [[NSURLQueryItem alloc] initWithName:@"maxResult" value:@"60"]];
     NSLog(@"%@", components.URL);
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -108,7 +110,11 @@ static NSString * const reuseIdentifier = @"RecipeCell";
     [self performSegueWithIdentifier:@"showDetail" sender:nil];
 }
 
+#pragma mark <UISearchBarDelegate>
 
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self getJSON:searchText];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
