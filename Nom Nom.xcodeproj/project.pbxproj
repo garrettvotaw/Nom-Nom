@@ -16,6 +16,7 @@
 		A796A98C2054B38500C60F05 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A796A98B2054B38500C60F05 /* CollectionViewController.m */; };
 		A796A98F2054B68200C60F05 /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A796A98E2054B68200C60F05 /* RecipeCell.m */; };
 		A7DDF41220577F2E00DDDC32 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DDF41120577F2E00DDDC32 /* Recipe.m */; };
+		A7DDF4152057807300DDDC32 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DDF4142057807300DDDC32 /* RecipeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		A796A98E2054B68200C60F05 /* RecipeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeCell.m; sourceTree = "<group>"; };
 		A7DDF41020577F2E00DDDC32 /* Recipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		A7DDF41120577F2E00DDDC32 /* Recipe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		A7DDF4132057807300DDDC32 /* RecipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		A7DDF4142057807300DDDC32 /* RecipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 			children = (
 				A796A98A2054B38500C60F05 /* CollectionViewController.h */,
 				A796A98B2054B38500C60F05 /* CollectionViewController.m */,
+				A7DDF4132057807300DDDC32 /* RecipeViewController.h */,
+				A7DDF4142057807300DDDC32 /* RecipeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				A796A9842054B2B300C60F05 /* main.m in Sources */,
 				A796A9762054B2B300C60F05 /* AppDelegate.m in Sources */,
 				A796A98C2054B38500C60F05 /* CollectionViewController.m in Sources */,
+				A7DDF4152057807300DDDC32 /* RecipeViewController.m in Sources */,
 				A796A98F2054B68200C60F05 /* RecipeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

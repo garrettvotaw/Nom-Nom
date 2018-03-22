@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Recipe : NSObject
-
+@property (nonatomic, strong) NSMutableArray *ingredientLines;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *totalTimeInSeconds;
+@property (nonatomic, strong) NSString *imageUrl;
 @end

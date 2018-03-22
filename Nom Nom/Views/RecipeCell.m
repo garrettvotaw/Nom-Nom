@@ -24,7 +24,7 @@
         UIImage *image = [UIImage imageWithData:data];
 
         dispatch_async(dispatch_get_main_queue(), ^{
-//            self.image.image = image;
+            self.image.image = image;
             NSLog(@"Error: %@", error);
         });
 

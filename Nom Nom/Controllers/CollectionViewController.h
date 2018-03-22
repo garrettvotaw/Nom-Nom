@@ -11,5 +11,5 @@
 #import "Meal.h"
 
 @interface CollectionViewController : UICollectionViewController
-
+- (void)getJSON:(NSString*)query;
 @end
