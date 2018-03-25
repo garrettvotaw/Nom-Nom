@@ -12,8 +12,7 @@
 
 - (void)setUrlString:(NSString *)urlString {
     _urlString = urlString;
-    //FIXME: Don't forget to uncomment
-//    [self downloadImageWithURL:urlString];
+    [self downloadImageWithURL:urlString];
 }
 
 - (void)downloadImageWithURL:(NSString*)urlString {

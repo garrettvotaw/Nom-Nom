@@ -59,7 +59,8 @@ static NSString * const reuseIdentifier = @"RecipeCell";
         NSLog(@"%@", error);
         NSLog(@"%@", response);
         if (data != nil) {
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error: nil];
+            
             NSArray *mealArray = json[@"matches"];
             NSMutableArray *meals = [[NSMutableArray alloc] init];
             for (NSDictionary *meal in mealArray) {
@@ -74,6 +75,16 @@ static NSString * const reuseIdentifier = @"RecipeCell";
                 self.mealArray = meals;
                 [self.collectionView reloadData];
             });
+        }
+        
+        if (error != nil) {
+            NSString *localizedDescription = error.userInfo[@"NSLocalizedDescriptionKey"];
+            UIAlertController *errorAlert = [[UIAlertController alloc] init];
+            errorAlert.title = [[NSString alloc] initWithFormat:@"Network Error"];
+            errorAlert.message = [[NSString alloc] initWithFormat:@"%@", localizedDescription];
+            UIAlertAction *okAction = [[UIAlertAction alloc] init];
+            [okAction title];
+            [errorAlert addAction:okAction];
         }
     }];
     [task resume];
